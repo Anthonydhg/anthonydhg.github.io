@@ -1,0 +1,80 @@
+* {
+  
+  padding: 0;
+  margin: 0;
+  font-family: san-serif;
+  
+}
+
+section {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #fdfa3d;
+}
+
+.section-box {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding: 50px;
+  text-align: center;
+}
+
+h2 {
+  opacity: 1;
+  color: black;
+  animation-name: letra;
+  animation-duration: 2s;
+  animation-timing-function: ease;
+}
+
+img {
+  height: 200px;
+  width: 250px;
+  margin: 30px 0;
+}
+
+img {
+  animation-name: logo;
+  animation-duration: 2s;
+  animation-timing-function: ease;
+  border: 0;
+  outline: none;
+}
+
+img:active {
+  transform: scale(0.8);
+}
+
+img:focus {
+  outline: none;
+}
+
+a{
+  border: none;
+  outline: none;
+  text-decoration: none;
+}
+
+@keyframes letra {
+  0% {
+    opacity: 0;
+    transform: scale(0.3);
+  }70% {
+    opacity: 0.6;
+  }100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+@keyframes logo {
+  from {
+    height: 300px;
+  }to {
+    height: 200px;
+  }
+}

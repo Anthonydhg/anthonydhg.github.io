@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+  <meta http-equiv="CONTENT-TYPE" content="text/html; charset=UTF-8">
+  <title>Catalogo | Proxy Library</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="style-catalogo.css">
+</head>
+<body>
+  
+  <header>
+      
+      <button class="botonMenu">
+          <i class="fa fa-bars"></i>
+      </button>
+      
+      <nav class="principal">
+          <ul>
+              <li><a href="menu.html">Inicio</a></li>
+              <li><a href="catalogo.html">Catalogo</a></li>
+              <li><a href="prestamo.html">Prestamo</a></li>
+              <li><a href="devolucion.html">Devolucion</a></li>
+              <li><a href="nosotros.html">Nosotros</a></li>
+          </ul>
+      </nav>
+  </header>
+  
+  <section>
+    
+    <div class="contenedor-busqueda">
+      
+        <input type="text" id="busqueda" placeholder="Buscar (titulo, autor)">
+        <button type="submit">Buscar</button>
+      
+    </div>
+    
+    <div class="seccion">
+      
+    
+      <h1>Catalogo</h1>
+  
+      <table id="tblLibros">
+          <thead>
+              <tr>
+                  <th>ID</th>
+                  <th>Título</th>
+                  <th>Autor</th>
+                  <th>Ejemplares</th>
+                  <th>Acciones</th>
+              </tr>
+          </thead>
+          <tbody>
+            
+              <tr>
+                  <td>1</td>
+                  <td>Cien años de soledad</td>
+                  <td>Gabriel García Márquez</td>
+                  <td>10</td>
+                  <td>
+                      <button onclick="editarLibro(1)">Editar</button>
+                      <button onclick="eliminarLibro(1)">Eliminar</button>
+                  </td>
+              </tr>
+          
+          </tbody>
+      </table>
+      
+    </div>
+    
+  </section>
+  
+  <script src="script-catalogo.js"></script>
+  
+</body>
+</html>

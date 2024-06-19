@@ -1,0 +1,239 @@
+* {
+  padding: 0;
+  font-family: sans-serif;
+  margin: 0;
+}
+
+.botonMenu {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 3rem;
+    height: 3rem;
+    position: fixed;
+    top: 1rem;
+    right: 1rem;
+    background-color: white;
+    border: 2px solid black;
+    color: black;
+    cursor: pointer;
+    border-radius: 50px;
+    font-size: 20px;
+}
+
+.botonMenu:focus {
+    outline: none;
+}
+
+.botonMenu:focus + .principal {
+    transform: translateX(0rem);
+}
+
+nav.principal {
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    width: 15rem;
+    height: 255px;
+    background-color: #fdfa3d;
+    transform: translateX(15rem);
+    transition: 1s all;
+    border-radius: 30px 0 0 30px;
+    z-index: 10;
+}
+
+nav.principal ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+nav.principal a {
+    border-radius: 30px 0 0 30px;
+    display: block;
+    text-decoration: none;
+    color: black;
+    padding: 1rem;
+    transition: .5s all;
+}
+nav.principal a:hover {
+    color: dimgrey;
+    text-decoration: none;
+}
+
+
+/*barra de busqueda*/
+
+.contenedor-busqueda {
+  position: fixed;
+  margin-bottom: 750px;
+  animation-name: menu;
+  animation-duration: 2s;
+  animation-timing-function: ease;
+}
+
+#busqueda {
+    flex-grow: 1;
+    padding: 5px;
+    border: 1px solid #ccc;
+    border-radius: 15px;
+    outline: none;
+    padding: 10px 20px;
+    margin-right: 5px;
+    box-shadow: 5px 0px 30px 0px rgba(59,57,59,0.4);
+}
+
+button {
+    padding: 10px 20px;
+    cursor: pointer;
+    background-color: #fdfa3d;
+    color: black;
+    border: none;
+    border-radius: 10px;
+    font-weight: 500;
+    box-shadow: 5px 0px 30px 0px rgba(59,57,59,0.4);
+}
+
+/*registro de libro*/
+
+section {
+  background-color: whitesmoke;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.box {
+  box-shadow: 5px 0px 30px 0px rgba(59,57,59,0.4);
+  color: black;
+  border-radius: 60px 60px 0 60px;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding: 40px 30px;
+  animation-name: menu;
+  animation-duration: 2s;
+  animation-timing-function: ease;
+  background-color: whitesmoke;
+  z-index: 1;
+}
+
+h1 {
+  
+}
+
+.du {
+  margin: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.du label {
+  padding-right: 10px;
+  font-weight: 500;
+}
+
+.du1 input {
+  outline: none;
+  border-radius: 5px;
+  padding: 3px 10px;
+  background-color: whitesmoke;
+  border: none;
+  border-bottom: 2px solid black;
+}
+
+.du1 input:focus {
+  transform: scale(1.1);
+  transition: all 0.2s ease;
+  margin-left: 10px;
+}
+
+.r-su input {
+  padding: 7px 15px;
+  background-color: #fdfa3d;
+  color: black;
+  border: none;
+  border-radius: 10px;
+  font-weight: 500;
+}
+
+.r-su input:active {
+  transform: scale(1.1);
+  background-color: #fdfa80;
+  transition: all 0.2s ease;
+}
+
+
+/*flecha*/
+
+.box-f {
+  background-color: black;
+  height: 400px;
+  width: 200px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: column;
+  border-radius: 150px;
+  position: fixed;
+  transform: translatey(70px);
+  text-align: center;
+  
+  animation-name: entrada;
+  animation-duration: 2s;
+  animation-timing-function: ease;
+}
+
+.box-f h1 {
+  margin-top: 100px;
+  color: white;
+}
+
+.f-img {
+  
+}
+
+.f-img img {
+  height: 80px;
+}
+
+.box-f:active {
+  animation-name: flecha;
+  animation-duration: 4s;
+  animation-timing-function: ease;
+}
+
+@keyframes flecha {
+  0% {
+    
+  }40% {
+    transform: translateY(300px)
+  }100%{
+    
+  }
+}
+
+@keyframes menu {
+  from {
+    opacity: 0;
+    transform: scale(0.8);
+  }to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+@keyframes entrada {
+  0%{
+    opacity: 0;
+  }80%{
+    opacity: 0;
+  }100%{
+    opacity: 1;
+  }
+}

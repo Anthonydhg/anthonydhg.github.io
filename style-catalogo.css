@@ -1,0 +1,177 @@
+* {
+  padding: 0;
+  font-family: sans-serif;
+  margin: 0;
+}
+
+.botonMenu {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 3rem;
+    height: 3rem;
+    position: fixed;
+    top: 1rem;
+    right: 1rem;
+    background-color: white;
+    border: 2px solid black;
+    color: black;
+    cursor: pointer;
+    border-radius: 50px;
+    font-size: 20px;
+}
+
+.botonMenu:focus {
+    outline: none;
+}
+
+.botonMenu:focus + .principal {
+    transform: translateX(0rem);
+}
+
+nav.principal {
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    width: 15rem;
+    height: 255px;
+    background-color: #fdfa3d;
+    transform: translateX(15rem);
+    transition: 1s all;
+    border-radius: 30px 0 0 30px;
+    z-index: 10;
+}
+
+nav.principal ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+nav.principal a {
+    border-radius: 30px 0 0 30px;
+    display: block;
+    text-decoration: none;
+    color: black;
+    padding: 1rem;
+    transition: .5s all;
+}
+nav.principal a:hover {
+    color: dimgrey;
+    text-decoration: none;
+}
+
+/*tabla*/
+
+section{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  background-color: whitesmoke;
+  height: 100vh;
+}
+
+.seccion {
+  animation-name: menu;
+  animation-duration: 2s;
+  animation-timing-function: ease;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  border-radius: 30px 30px 0 30px;
+  padding: 40px 30px;
+  box-shadow: 5px 0px 30px 0px rgba(59,57,59,0.4);
+}
+
+h1 {
+  margin-bottom: 15px;
+}
+
+table {
+  border-collapse: collapse;
+  width: 100%;
+  border-radius: 10px;
+}
+
+th, td {
+  text-align: left;
+  padding: 8px;
+}
+
+th {
+  background-color: #f0f0f0;
+  border-radius: 10px;
+}
+
+.editable {
+  background-color: #ffe080;
+}
+
+button {
+  padding: 5px 12px;
+  background-color: #fdfa3d;
+  color: black;
+  border: none;
+  border-radius: 10px;
+  font-weight: 500;
+  margin: 6px 0;
+}
+
+button:active {
+  transform: scale(1.2);
+  transition: all 0.1s ease;
+}
+
+.tr {
+  background-color: #fdfa3d;
+  color: black;
+}
+
+.trb {
+  background-color: whitesmoke;
+  color: black;
+}
+
+/*barra de busqueda*/
+
+.contenedor-busqueda {
+  position: fixed;
+  margin-bottom: 750px;
+  animation-name: menu;
+  animation-duration: 2s;
+  animation-timing-function: ease;
+}
+
+#busqueda {
+    flex-grow: 1;
+    padding: 5px;
+    border: 1px solid #ccc;
+    border-radius: 15px;
+    outline: none;
+    padding: 10px 20px;
+    margin-right: 5px;
+    box-shadow: 5px 0px 30px 0px rgba(59,57,59,0.4);
+}
+
+button {
+    padding: 10px 20px;
+    cursor: pointer;
+    background-color: #fdfa3d;
+    color: black;
+    border: none;
+    border-radius: 10px;
+    font-weight: 500;
+    box-shadow: 5px 0px 30px 0px rgba(59,57,59,0.4);
+}
+
+@keyframes menu {
+  from {
+    opacity: 0;
+    transform: scale(0.8);
+  }to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
